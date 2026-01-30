@@ -31,7 +31,8 @@ public class PizzariaController {
     
     public List<Pizzaria> listar() {
         return pizzariaService.listarTodas();
-    }
+    }   
+    
 
     @PostMapping
     public Pizzaria criar(@RequestBody Pizzaria pizzaria) {

@@ -7,7 +7,7 @@ import com.turmatds2.tds2.repository.ItemPedidoRepository;
 
 @Service
 public class ItemPedidoService {
-     private final  ItemPedidoRepository itemPedidoRepository;
+    private final  ItemPedidoRepository itemPedidoRepository;
 
     public ItemPedidoService( ItemPedidoRepository itemPedidoRepository) {
         this.itemPedidoRepository =itemPedidoRepository;
@@ -17,8 +17,8 @@ public class ItemPedidoService {
         return itemPedidoRepository.findAll();
     }
 
-    public  ItemPedido salvar( ItemPedido endereco) {
-        return itemPedidoRepository.save(endereco);
+    public  ItemPedido salvar( ItemPedido itemPedido ) {
+        return itemPedidoRepository.save(itemPedido);
     }
 
     public  ItemPedido buscarPorId(Long id) {

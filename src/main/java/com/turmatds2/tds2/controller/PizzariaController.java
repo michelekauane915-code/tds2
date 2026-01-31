@@ -15,7 +15,7 @@ import com.turmatds2.tds2.model.Pizzaria;
 import com.turmatds2.tds2.service.PizzariaService;
 
 @RestController
-@RequestMapping("/pizzaria")
+@RequestMapping("/Pizzaria")
 public class PizzariaController {
 
     private final PizzariaService pizzariaService;
@@ -32,7 +32,6 @@ public class PizzariaController {
     public List<Pizzaria> listar() {
         return pizzariaService.listarTodas();
     }   
-    
 
     @PostMapping
     public Pizzaria criar(@RequestBody Pizzaria pizzaria) {

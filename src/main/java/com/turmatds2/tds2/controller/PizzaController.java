@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@RequestMapping("/pizzas")
+@RequestMapping("/Pizzas")
 public class PizzaController {
 
     private final PizzaService pizzaService;

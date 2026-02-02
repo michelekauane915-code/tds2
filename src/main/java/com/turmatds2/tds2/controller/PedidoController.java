@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.turmatds2.tds2.model.Endereco;
-import com.turmatds2.tds2.service.EnderecoService;
+import com.turmatds2.tds2.model.Pedido;
+import com.turmatds2.tds2.service.PedidoService;
 
-  @RestController
-@RequestMapping("/Enderecos")
-public class EnderecoController {
+@RestController
+@RequestMapping("/Pedidos")
+public class PedidoController {
 
-    private final EnderecoService enderecoService;
+    private final PedidoService pedidoService;
 
-    public EnderecoController(EnderecoService enderecoService) {
-        this.enderecoService = enderecoService;
+    public PedidoController(PedidoService pedidoService) {
+        this.pedidoService = pedidoService;
     }
 
     @GetMapping
@@ -28,22 +28,22 @@ public class EnderecoController {
         return new String();
     }
     
-    public List<Endereco> listar() {
-        return enderecoService.listarTodas();
+    public List<Pedido> listar() {
+        return pedidoService.listarTodas();
     }
 
     @PostMapping
-    public Endereco criar(@RequestBody Endereco endereco) {
-        return enderecoService.salvar(endereco);
+    public Pedido criar(@RequestBody Pedido pedido) {
+        return pedidoService.salvar(pedido);
     }
 
     @GetMapping("/{id}")
-    public Endereco buscarPorId(@PathVariable Long id) {
-        return enderecoService.buscarPorId(id);
+    public Pedido buscarPorId(@PathVariable Long id) {
+        return pedidoService.buscarPorId(id);
     }
 
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
-        enderecoService.deletar(id);
-    } 
+        pedidoService.deletar(id);
+    }  
 }

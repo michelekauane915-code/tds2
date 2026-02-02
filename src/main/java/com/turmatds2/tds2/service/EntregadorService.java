@@ -26,7 +26,7 @@ public class EntregadorService {
                 .orElseThrow(() -> new RuntimeException("Entregador não encontrada"));
     }
 
-    public void deletar(Long id) {
+    public static void deletar(Long id) {
         entregadorRepository.deleteById(id);
     }
 }
